@@ -38,14 +38,6 @@ public class Achievement {
     @Column(nullable = false)
     private Integer points = 0;
 
-    @CreationTimestamp
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private ZonedDateTime createdAt;
 
-    @JsonIgnore
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "achievement", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<StudentAchievement> studentAchievements = new HashSet<>();
 }
 
