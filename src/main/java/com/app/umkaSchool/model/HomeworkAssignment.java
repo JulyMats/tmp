@@ -22,12 +22,7 @@ public class HomeworkAssignment {
     @Column(name = "homework_assignment_id", nullable = false)
     private UUID id;
 
-    @JsonIgnore
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "homework_id", nullable = false)
-    private Homework homework;
+    
 
     @JsonIgnore
     @ToString.Exclude

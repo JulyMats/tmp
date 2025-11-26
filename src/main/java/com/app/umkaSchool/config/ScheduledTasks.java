@@ -41,5 +41,7 @@ public class ScheduledTasks {
             logger.error("Error during scheduled overdue assignments update: {}", e.getMessage(), e);
         }
     }
+
+    ///////nfreirim
 }
 

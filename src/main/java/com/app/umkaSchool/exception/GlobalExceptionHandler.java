@@ -41,7 +41,6 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 
-    // Inner class for error response structure
 
 
         // Getters
