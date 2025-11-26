@@ -19,11 +19,7 @@ public class ScheduledTasks {
         this.homeworkAssignmentService = homeworkAssignmentService;
     }
 
-    /**
-     * Runs daily at 1:00 AM to cleanup duplicate snapshots from yesterday.
-     * Deletes all snapshots from yesterday except the last one, if there were new attempts.
-     * Cron format: second, minute, hour, day of month, month, day of week
-     */
+
     @Scheduled(cron = "0 0 1 * * ?")
     public void cleanupYesterdaySnapshots() {
         logger.info("Starting scheduled cleanup of yesterday's duplicate snapshots");
@@ -35,11 +31,6 @@ public class ScheduledTasks {
         }
     }
 
-    /**
-     * Runs daily at 2:00 AM to check and update overdue homework assignments.
-     * Updates assignments with due date in the past from PENDING to OVERDUE.
-     * Cron format: second, minute, hour, day of month, month, day of week
-     */
     @Scheduled(cron = "0 0 2 * * ?")
     public void updateOverdueAssignments() {
         logger.info("Starting scheduled update of overdue homework assignments");
