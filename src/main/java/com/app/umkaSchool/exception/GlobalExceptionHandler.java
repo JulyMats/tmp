@@ -50,16 +50,7 @@ public class GlobalExceptionHandler {
     }
 
     // Inner class for error response structure
-    public static class ErrorResponse {
-        private int status;
-        private String message;
-        private ZonedDateTime timestamp;
 
-        public ErrorResponse(int status, String message, ZonedDateTime timestamp) {
-            this.status = status;
-            this.message = message;
-            this.timestamp = timestamp;
-        }
 
         // Getters
         public int getStatus() {
